@@ -1,0 +1,22 @@
+<app-header></app-header>
+<app-search></app-search>
+<app-tags></app-tags>
+<div class="slider1">
+    <ul>
+        <li *ngFor="let proizvodi of proizvodi"> <br>
+            <div class="content">
+                <div class="ime">   
+                    {{proizvodi.ime}}
+                </div>
+                <div class="cena">
+                     {{proizvodi.cena}}
+                </div>
+                <div class="zemlja">
+                 {{proizvodi.zemljaPorekla}}
+                </div>
+            </div>
+            <a routerLink="/proizvodi-page/{{proizvodi.id}}"><img src="{{proizvodi.imageUrl}}" />
+            </a>
+        </li>
+    </ul>
+</div>

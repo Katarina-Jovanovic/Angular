@@ -9,13 +9,12 @@ body /*za ceo sajt*/ {
           background-color:#ca592a;
           text-align: center;
           padding: 0;
-          margin: 0;}
+          margin: 0;
+        }
       .nav li {
           position: center-left;
           font-family: 'Oswald', sans-serif;
-          font-size: 1.2em;
-          line-height: 10px;
-          height: 10px;
+          font-size: 15px;
           border-bottom: 1px solid #888;
           font-size-adjust:auto;
           }
@@ -27,6 +26,7 @@ body /*za ceo sajt*/ {
           transition: .3s background-color;
           }
           .nav a:hover {
+            color: white;
               background-color: #ffbf80;
               }
       
@@ -38,27 +38,10 @@ body /*za ceo sajt*/ {
                       border-bottom: none;
                       height: 50px;
                       line-height: 50px;
-                      font-size: 1.4em;
+                      font-size: 15px;
                       }
                       .nav li {
                           display: inline-block;
                           margin-right: -4px;
                           }
-                          
-                }
-  
-      
-  
-  .sidenav {
-   
-    position: fixed;  }
-  
-  .sidenav p,h6,h5 {
-    padding: 1px 15px 5px 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    display: block;
-  }
-  
- 
+                        }                    

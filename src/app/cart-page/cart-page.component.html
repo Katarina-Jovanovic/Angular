@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<ul>
+    <li *ngFor="let cartItem of cart.items">
+
+<div>
+    <img [src]="cartItem.proizvod.imageUrl" [alt]="cartItem.proizvod.ime">
+</div>
+<div>
+    <a routerLink="/proizvodi-page/{{cartItem.proizvod.id}}"> {{cartItem.proizvod.ime}}</a>
+</div>
+<div>
+    <select #quantitySelect (change)="changeQuantity(cartItem,quantitySelect.value)">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+
+    </select>
+</div>
+
+<div class="cena">
+    {{cartItem.cena}}
+</div>
+<div>
+    <button class="remove-button" (click)="izbaciIzKorpe(cartItem)">Izbrisi</button>
+</div>
+
+    </li>
+</ul>
+
+<div class="kasa">
+
+
+    <div class="proizvod-count">Broj proizvoda: {{cart.items.length}}</div>
+</div>

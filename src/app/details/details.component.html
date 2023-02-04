@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="container">
+
+    <img [src]="proizvodi.imageUrl" [alt]="proizvodi.ime"/>
+    <div class="details">
+    <div class="header">
+
+        <span class="name">{{proizvodi.ime}}</span> 
+        <span class="cena">{{proizvodi.cena}}</span> 
+        <span class="zemljaPorekla">{{proizvodi.zemljaPorekla}}</span>
+        <div class="tags">
+            <app-tags [proizvodiTags]=""></app-tags>
+        </div>
+        
+        <button (click)="dodajUKorpu()">Dodaj u Korpu</button>
+    </div>
+</div>

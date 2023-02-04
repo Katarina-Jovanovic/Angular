@@ -1,0 +1,28 @@
+<div class="container">
+
+    <form (ngSubmit)="onSignup()" name="singup" [formGroup]="signup">
+    <h3>Sign Up</h3>
+    <div class="form-group">
+        
+        <label for="fname"> Vaše ime:</label>
+        <br><input type="text" formControlName="fname" placeholder="Unesite ime" required />
+        <span *ngIf="!signup.controls['fname'].valid">Unesite pravilne podatke!</span> <br> <br>
+        <label for="lname">Prezime:</label>
+        <br><input type="text" formControlName="lname" placeholder="Unesite prezime" required/>
+        <span *ngIf="!signup.controls['lname'].valid">Unesite pravilne podatke!</span> <br> <br>
+        <label for="email">Email:</label>
+        <br><input type="text" formControlName="email" placeholder="Unesite email" required/>
+        <span *ngIf="!signup.controls['email'].valid">Unesite pravilne podatke!</span> <br> <br>
+        <label for="name"> Korisničko ime:</label>
+        <br><input type="text" formControlName="username" placeholder="Unesite korisničko ime" required/>
+        <span *ngIf="!signup.controls['username'].valid">Unesite pravilne podatke!</span> <br> <br>
+        <label for="Password"> Password</label>
+        <input type="password" formControlName="password" placeholder="Unesite Lozinku" required/>
+        <span *ngIf="!signup.controls['password'].valid">Unesite pravilne podatke!</span> <br> <br>
+    </div>
+    <button class="button">Sign up</button><br><br>
+    <span class="spam">Već imaš nalog uloguj se:  <a routerLink="/login-page" style="color:dodgerblue">Login</a><br>
+    </span>
+    
+</form>
+</div>

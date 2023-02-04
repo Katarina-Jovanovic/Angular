@@ -1,0 +1,21 @@
+<div class="container">
+
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+    <h3>Login</h3>
+    <div class="form-group">
+        <label for="name"> Korisničko ime:</label>
+        <br><input type="text" formControlName="username" placeholder="Unesite ime" required/>
+        <span *ngIf="!loginForm.controls['username'].valid">Unesite pravilne podatke!</span> <br> <br>
+        
+        <label for="Password"> Lozinka:</label>
+        <input type="password" formControlName="password" placeholder="Unesite Lozinku" required/>
+        <span *ngIf="!loginForm.controls['password'].valid">Unesite pravilne podatke!</span>
+       
+    </div>
+    <button class="button">Login</button><br><br>
+    <span class="spam">Kreiraj nov nalog:  <a routerLink="/signup-page" style="color:dodgerblue">Sign up</a><br>
+        
+    </span>
+    <span class="spam">Pregledaj naše poklone:  <a routerLink="/pocetna-page" style="color:dodgerblue">Pogledaj stranicu</a><br></span>
+</form>
+</div>
